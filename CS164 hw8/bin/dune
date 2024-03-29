@@ -1,0 +1,13 @@
+(executable
+ (name interp)
+ (modules interp)
+ (preprocess
+  (pps ppx_let))
+ (libraries shared core lib lisp_syntax))
+
+(executable
+ (name compile)
+ (modules compile)
+ (preprocess
+  (pps ppx_let))
+ (libraries shared core lib lisp_syntax))
